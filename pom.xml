@@ -8,6 +8,14 @@
     <artifactId>WebTodoApp</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <name>Maven Plugin Repository</name>
+            <url>http://repo1.maven.org/maven3</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
         <dependency>
@@ -59,7 +67,6 @@
             <artifactId>javax.servlet.jsp.jstl-api</artifactId>
             <version>1.2.2</version>
         </dependency>
-
 
     </dependencies>
     

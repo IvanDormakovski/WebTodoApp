@@ -23,11 +23,13 @@ public class UserController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.sendRedirect("/register/register.jsp");
+        resp.setStatus(HttpServletResponse.SC_OK);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         register(req, resp);
+        resp.setStatus(HttpServletResponse.SC_OK);
     }
 
     private void register(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

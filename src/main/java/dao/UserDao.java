@@ -12,8 +12,9 @@ public class UserDao {
         String INSERT_USER_SQL = "INSERT INTO users (first_name, last_name, username, password) VALUES (?, ?, ?, ?)";
 
         int result = 0;
-        try (Connection connection = JDBCUtils.getConnection()) {
-            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USER_SQL);
+        try (Connection connection = JDBCUtils.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USER_SQL)) {
+//            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USER_SQL);
             preparedStatement.setString(1, user.getFirstName());
             preparedStatement.setString(2, user.getLastName());
             preparedStatement.setString(3, user.getUserName());
